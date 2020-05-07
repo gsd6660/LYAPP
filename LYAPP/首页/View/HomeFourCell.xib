@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeFourCell" customModule="LYAPP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="204" height="260"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="204" height="260"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJO-wD-JDO">
+                        <rect key="frame" x="5" y="5" width="194" height="250"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="商品大小" translatesAutoresizingMaskIntoConstraints="NO" id="uBU-5x-xoN">
+                                <rect key="frame" x="10" y="10" width="174" height="142"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="优质红葡萄酒1000ml" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZO3-s0-ZEE">
+                                <rect key="frame" x="10" y="162" width="174" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="口感香醇 传统酿造 拷贝" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBz-8N-hZk">
+                                <rect key="frame" x="10" y="185" width="174" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥8.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6t-1H-NIg">
+                                <rect key="frame" x="10" y="209.5" width="174" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" red="0.92941176469999998" green="0.63529411759999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月销1258件" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pS0-CH-CA6">
+                                <rect key="frame" x="10" y="231.5" width="65.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SO-iI-Kfj">
+                                <rect key="frame" x="159" y="220" width="25" height="25"/>
+                                <state key="normal" image="home_cart"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="0SO-iI-Kfj" secondAttribute="bottom" constant="5" id="BU8-0F-lcI"/>
+                            <constraint firstItem="pS0-CH-CA6" firstAttribute="top" secondItem="h6t-1H-NIg" secondAttribute="bottom" constant="5" id="C8b-rZ-RTP"/>
+                            <constraint firstAttribute="trailing" secondItem="h6t-1H-NIg" secondAttribute="trailing" constant="10" id="FXj-E2-Xgx"/>
+                            <constraint firstItem="pS0-CH-CA6" firstAttribute="leading" secondItem="DJO-wD-JDO" secondAttribute="leading" constant="10" id="GH4-uO-PmC"/>
+                            <constraint firstItem="h6t-1H-NIg" firstAttribute="leading" secondItem="DJO-wD-JDO" secondAttribute="leading" constant="10" id="LxS-Ui-dON"/>
+                            <constraint firstAttribute="trailing" secondItem="ZO3-s0-ZEE" secondAttribute="trailing" constant="10" id="NGE-xM-ieu"/>
+                            <constraint firstItem="h6t-1H-NIg" firstAttribute="top" secondItem="aBz-8N-hZk" secondAttribute="bottom" constant="10" id="Px8-4W-Vem"/>
+                            <constraint firstItem="aBz-8N-hZk" firstAttribute="leading" secondItem="DJO-wD-JDO" secondAttribute="leading" constant="10" id="RNL-Q7-v9z"/>
+                            <constraint firstItem="aBz-8N-hZk" firstAttribute="top" secondItem="ZO3-s0-ZEE" secondAttribute="bottom" constant="5" id="Xl2-5Z-Wvl"/>
+                            <constraint firstItem="uBU-5x-xoN" firstAttribute="top" secondItem="DJO-wD-JDO" secondAttribute="top" constant="10" id="bG7-dl-wB9"/>
+                            <constraint firstItem="uBU-5x-xoN" firstAttribute="centerX" secondItem="DJO-wD-JDO" secondAttribute="centerX" id="did-37-fPg"/>
+                            <constraint firstAttribute="trailing" secondItem="aBz-8N-hZk" secondAttribute="trailing" constant="10" id="rYg-ez-nwr"/>
+                            <constraint firstAttribute="trailing" secondItem="0SO-iI-Kfj" secondAttribute="trailing" constant="10" id="vwv-zF-pAH"/>
+                            <constraint firstAttribute="trailing" secondItem="uBU-5x-xoN" secondAttribute="trailing" constant="10" id="xbu-6n-UeT"/>
+                            <constraint firstItem="uBU-5x-xoN" firstAttribute="leading" secondItem="DJO-wD-JDO" secondAttribute="leading" constant="10" id="yse-S0-FJk"/>
+                            <constraint firstItem="ZO3-s0-ZEE" firstAttribute="top" secondItem="uBU-5x-xoN" secondAttribute="bottom" constant="10" id="z4b-3i-xYm"/>
+                            <constraint firstItem="ZO3-s0-ZEE" firstAttribute="leading" secondItem="DJO-wD-JDO" secondAttribute="leading" constant="10" id="zUb-bj-Wbb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="DJO-wD-JDO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="4rA-cf-yKk"/>
+                <constraint firstItem="DJO-wD-JDO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="6rq-c1-TgZ"/>
+                <constraint firstAttribute="trailing" secondItem="DJO-wD-JDO" secondAttribute="trailing" constant="5" id="WMv-oh-0ua"/>
+                <constraint firstAttribute="bottom" secondItem="DJO-wD-JDO" secondAttribute="bottom" constant="5" id="l1l-ff-GmB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="204" height="260"/>
+            <connections>
+                <outlet property="addCartBtn" destination="0SO-iI-Kfj" id="Vw4-03-omF"/>
+                <outlet property="bgView" destination="DJO-wD-JDO" id="Gzp-cA-01a"/>
+                <outlet property="goodDesc" destination="aBz-8N-hZk" id="aYW-BC-dsJ"/>
+                <outlet property="goodName" destination="ZO3-s0-ZEE" id="hZb-dJ-CQN"/>
+                <outlet property="goodsImage" destination="uBU-5x-xoN" id="SHi-fa-Dbt"/>
+                <outlet property="priceLabel" destination="h6t-1H-NIg" id="A1V-oR-JgL"/>
+                <outlet property="sumLabel" destination="pS0-CH-CA6" id="qlH-J3-OhC"/>
+            </connections>
+            <point key="canvasLocation" x="-333.33333333333337" y="97.098214285714278"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="home_cart" width="25" height="25"/>
+        <image name="商品大小" width="169.5" height="142"/>
+    </resources>
+</document>
