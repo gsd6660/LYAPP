@@ -10,6 +10,9 @@
 		7088399624653A2500610890 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7088399524653A2500610890 /* API.swift */; };
 		7088399824653A3900610890 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7088399724653A3900610890 /* NetWorkManager.swift */; };
 		7088399A24653A4600610890 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7088399924653A4600610890 /* MoyaConfig.swift */; };
+		7088399E2465834000610890 /* qdy.png in Resources */ = {isa = PBXBuildFile; fileRef = 7088399B2465833E00610890 /* qdy.png */; };
+		7088399F2465834000610890 /* qdy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7088399C2465833F00610890 /* qdy@2x.png */; };
+		708839A02465834000610890 /* qdy@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7088399D2465834000610890 /* qdy@3x.png */; };
 		70C4567E24639D99002ED6E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C4567D24639D99002ED6E3 /* AppDelegate.swift */; };
 		70C4568524639D99002ED6E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C4568324639D99002ED6E3 /* Main.storyboard */; };
 		70C4568A24639D9B002ED6E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C4568824639D9B002ED6E3 /* LaunchScreen.storyboard */; };
@@ -46,6 +49,9 @@
 		7088399524653A2500610890 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		7088399724653A3900610890 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
 		7088399924653A4600610890 /* MoyaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
+		7088399B2465833E00610890 /* qdy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qdy.png; sourceTree = "<group>"; };
+		7088399C2465833F00610890 /* qdy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qdy@2x.png"; sourceTree = "<group>"; };
+		7088399D2465834000610890 /* qdy@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qdy@3x.png"; sourceTree = "<group>"; };
 		70C4567A24639D99002ED6E3 /* LYAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70C4567D24639D99002ED6E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70C4568424639D99002ED6E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -142,6 +148,9 @@
 				70C456A624639FC2002ED6E3 /* 宏文件 */,
 				70C4568324639D99002ED6E3 /* Main.storyboard */,
 				70C4568824639D9B002ED6E3 /* LaunchScreen.storyboard */,
+				7088399B2465833E00610890 /* qdy.png */,
+				7088399C2465833F00610890 /* qdy@2x.png */,
+				7088399D2465834000610890 /* qdy@3x.png */,
 				70C4568B24639D9B002ED6E3 /* Info.plist */,
 				70C456AC2463A1C2002ED6E3 /* Assets.xcassets */,
 				70C456B22463BBF3002ED6E3 /* 1.jpg */,
@@ -293,12 +302,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7088399F2465834000610890 /* qdy@2x.png in Resources */,
 				70C456BD2463BBF5002ED6E3 /* 6.jpg in Resources */,
 				70C456CE2463F5ED002ED6E3 /* HomeFourCell.xib in Resources */,
 				70C456BE2463BBF5002ED6E3 /* 5.jpg in Resources */,
 				70C456BA2463BBF5002ED6E3 /* 2.jpg in Resources */,
 				70C456BB2463BBF5002ED6E3 /* 4.jpg in Resources */,
+				708839A02465834000610890 /* qdy@3x.png in Resources */,
 				70C4568A24639D9B002ED6E3 /* LaunchScreen.storyboard in Resources */,
+				7088399E2465834000610890 /* qdy.png in Resources */,
 				70C456AD2463A1C2002ED6E3 /* Assets.xcassets in Resources */,
 				70C4568524639D99002ED6E3 /* Main.storyboard in Resources */,
 				70C456CA2463F021002ED6E3 /* HomeThreeCell.xib in Resources */,
