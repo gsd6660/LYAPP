@@ -17,4 +17,10 @@ class HomeThreeCell: UICollectionViewCell {
         // Initialization code
     }
 
+    public func setData(dataDic:NSDictionary){
+        self.nameLabel.text = (dataDic["name"] as! String)
+        let imageDic = dataDic["image"] as! NSDictionary
+        self.iconImv.kf.setImage(with: URL.init(string: imageDic["file_path"] as! String))
+    }
+    
 }

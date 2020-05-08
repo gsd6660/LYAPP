@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Moya
+import SwiftyJSON
 class HomeViewController: BaseViewController {
     
     let HomeOneCellID = "HomeOneCell"
@@ -19,13 +20,53 @@ class HomeViewController: BaseViewController {
     let HomeFiveCellID = "HomeFiveCell"
     var collectionView : UICollectionView!
     
+    /// 用来主动取消网络请求
+    var cancelableRequest: Cancellable?
+    var dataDic = [String:Any]()
+    var bannerArray = [Any]();
+    var categorys = NSArray()
+    var goodsArray = NSArray()
+    var articles = NSArray()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "隆源商城"
         initCollectionView()
         
-        
+        loadDatas()
+        loadGoods()
     }
+    
+    func loadDatas(){
+        cancelableRequest = NetWorkRequest(API.Home, completion: { (respone) in
+         
+            print("code = \(respone["code"])")
+            if  respone["code"] == 1{
+                self.dataDic = respone["data"].dictionaryObject!
+                self.bannerArray = self.dataDic["banner"] as! [Any]
+                print("首页数据==\(self.dataDic)")
+                self.categorys = self.dataDic["category"] as! NSArray
+                self.articles = self.dataDic["articles"] as! NSArray
+                self.collectionView.reloadData()
+            }
+        }, failed: { (failed) in
+            
+        })
+    }
+    
+    func loadGoods(){
+        NetWorkRequest(.HomeGoods, completion: { (respone) in
+            if respone["code"] == 1{
+                print("商品数据\(respone)")
+                self.goodsArray = respone["data"]["list"]["data"].arrayObject! as NSArray
+                self.collectionView.reloadData()
+            }
+        }, failed: { (failed) in
+            
+        })
+    }
+    
     
     func initCollectionView(){
         let flayout = UICollectionViewFlowLayout()
@@ -56,10 +97,10 @@ extension HomeViewController :UICollectionViewDelegate,UICollectionViewDataSourc
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 1 {
-            return 8
+            return self.categorys.count
         }
         if section == 3{
-            return 8
+            return self.goodsArray.count
         }
  
         return 1
@@ -67,20 +108,30 @@ extension HomeViewController :UICollectionViewDelegate,UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let cell : HomeOneCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeOneCellID, for: indexPath) as! HomeOneCell 
-            
+            let cell : HomeOneCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeOneCellID, for: indexPath) as! HomeOneCell
+          
+            if !self.bannerArray.isEmpty  {
+                cell.setDic(dataArray: self.bannerArray as NSArray)
+            }
             return cell
         }else if indexPath.section == 1{
             let cell : HomeThreeCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeThreeCellID, for: indexPath) as! HomeThreeCell
+            if self.categorys.count>0 {
+                cell.setData(dataDic: self.categorys[indexPath.row] as! NSDictionary)
+            }
             return cell;
         } else if indexPath.section == 2{
             let cell : HomeTwoCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeTwoCellID, for: indexPath) as! HomeTwoCell
             return cell
         }else if indexPath.section == 3{
             let cell : HomeFourCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeFourCellID, for: indexPath) as! HomeFourCell
+            if self.goodsArray.count>0 {
+                cell.setDataDic(dataDic: self.goodsArray[indexPath.row] as! NSDictionary)
+            }
             return cell
         }else{
             let cell : HomeFiveCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeFiveCellID, for: indexPath) as! HomeFiveCell
+            cell.setArray(articles: self.articles)
             return cell
         }
         

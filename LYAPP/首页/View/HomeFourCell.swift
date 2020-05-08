@@ -30,4 +30,15 @@ class HomeFourCell: UICollectionViewCell {
            view.layer.shadowRadius = 4.5
            view.layer.cornerRadius = 3;
        }
+    
+    
+    func setDataDic(dataDic:NSDictionary){
+        self.goodsImage.kf.setImage(with: URL.init(string: dataDic["goods_image"] as! String))
+        self.goodName.text = (dataDic["goods_name"] as! String)
+        self.goodDesc.text = (dataDic["selling_point"] as! String);
+        let goodsku = dataDic["goods_sku"] as! NSDictionary
+        self.priceLabel.text = "￥\(goodsku["goods_price"] as! String)"
+        self.sumLabel.text = "月销\(dataDic["goods_sales"] ?? "0")件"
+    }
+        
 }

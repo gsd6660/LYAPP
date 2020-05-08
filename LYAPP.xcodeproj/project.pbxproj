@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7088399624653A2500610890 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7088399524653A2500610890 /* API.swift */; };
+		7088399824653A3900610890 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7088399724653A3900610890 /* NetWorkManager.swift */; };
+		7088399A24653A4600610890 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7088399924653A4600610890 /* MoyaConfig.swift */; };
 		70C4567E24639D99002ED6E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C4567D24639D99002ED6E3 /* AppDelegate.swift */; };
 		70C4568524639D99002ED6E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C4568324639D99002ED6E3 /* Main.storyboard */; };
 		70C4568A24639D9B002ED6E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C4568824639D9B002ED6E3 /* LaunchScreen.storyboard */; };
@@ -18,7 +21,6 @@
 		70C4569F24639F88002ED6E3 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C4569E24639F88002ED6E3 /* CartViewController.swift */; };
 		70C456A124639F8F002ED6E3 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C456A024639F8F002ED6E3 /* MineViewController.swift */; };
 		70C456A824639FC2002ED6E3 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C456A724639FC2002ED6E3 /* Common.swift */; };
-		70C456AB24639FCB002ED6E3 /* HttpDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C456AA24639FCA002ED6E3 /* HttpDatas.swift */; };
 		70C456AD2463A1C2002ED6E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70C456AC2463A1C2002ED6E3 /* Assets.xcassets */; };
 		70C456B02463B656002ED6E3 /* HomeOneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C456AF2463B656002ED6E3 /* HomeOneCell.swift */; };
 		70C456B82463BBF5002ED6E3 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 70C456B12463BBF3002ED6E3 /* 7.jpg */; };
@@ -37,11 +39,13 @@
 		70C456D02463FFB4002ED6E3 /* CollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C456CF2463FFB4002ED6E3 /* CollectionFooterView.swift */; };
 		70C456D22463FFFC002ED6E3 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C456D12463FFFC002ED6E3 /* CollectionHeaderView.swift */; };
 		70C456D424640D08002ED6E3 /* HomeFiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C456D324640D08002ED6E3 /* HomeFiveCell.swift */; };
-		70C456D624642570002ED6E3 /* NetWorkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C456D524642570002ED6E3 /* NetWorkingManager.swift */; };
 		AD1944D8854DE891920F64E8 /* Pods_LYAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBD8A111D32C357972C6BD7 /* Pods_LYAPP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7088399524653A2500610890 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		7088399724653A3900610890 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
+		7088399924653A4600610890 /* MoyaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
 		70C4567A24639D99002ED6E3 /* LYAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70C4567D24639D99002ED6E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70C4568424639D99002ED6E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,7 +59,6 @@
 		70C4569E24639F88002ED6E3 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		70C456A024639F8F002ED6E3 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		70C456A724639FC2002ED6E3 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		70C456AA24639FCA002ED6E3 /* HttpDatas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpDatas.swift; sourceTree = "<group>"; };
 		70C456AC2463A1C2002ED6E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70C456AF2463B656002ED6E3 /* HomeOneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOneCell.swift; sourceTree = "<group>"; };
 		70C456B12463BBF3002ED6E3 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
@@ -74,7 +77,6 @@
 		70C456CF2463FFB4002ED6E3 /* CollectionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFooterView.swift; sourceTree = "<group>"; };
 		70C456D12463FFFC002ED6E3 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		70C456D324640D08002ED6E3 /* HomeFiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFiveCell.swift; sourceTree = "<group>"; };
-		70C456D524642570002ED6E3 /* NetWorkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkingManager.swift; sourceTree = "<group>"; };
 		8FBD8A111D32C357972C6BD7 /* Pods_LYAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF09C9F1A1BAB65C7F31FDAD /* Pods-LYAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYAPP.debug.xcconfig"; path = "Target Support Files/Pods-LYAPP/Pods-LYAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		E9FA47664A21ECB98A7739AC /* Pods-LYAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYAPP.release.xcconfig"; path = "Target Support Files/Pods-LYAPP/Pods-LYAPP.release.xcconfig"; sourceTree = "<group>"; };
@@ -207,8 +209,9 @@
 		70C456A924639FCA002ED6E3 /* 网络请求 */ = {
 			isa = PBXGroup;
 			children = (
-				70C456AA24639FCA002ED6E3 /* HttpDatas.swift */,
-				70C456D524642570002ED6E3 /* NetWorkingManager.swift */,
+				7088399524653A2500610890 /* API.swift */,
+				7088399724653A3900610890 /* NetWorkManager.swift */,
+				7088399924653A4600610890 /* MoyaConfig.swift */,
 			);
 			path = "网络请求";
 			sourceTree = "<group>";
@@ -362,16 +365,17 @@
 				70C456CD2463F5ED002ED6E3 /* HomeFourCell.swift in Sources */,
 				70C456D22463FFFC002ED6E3 /* CollectionHeaderView.swift in Sources */,
 				70C456D02463FFB4002ED6E3 /* CollectionFooterView.swift in Sources */,
-				70C456D624642570002ED6E3 /* NetWorkingManager.swift in Sources */,
+				7088399A24653A4600610890 /* MoyaConfig.swift in Sources */,
 				70C456C12463DFE3002ED6E3 /* HomeTwoCell.swift in Sources */,
 				70C4569224639EDD002ED6E3 /* BaseViewController.swift in Sources */,
 				70C4569F24639F88002ED6E3 /* CartViewController.swift in Sources */,
 				70C456D424640D08002ED6E3 /* HomeFiveCell.swift in Sources */,
 				70C4569D24639F79002ED6E3 /* MallViewController.swift in Sources */,
-				70C456AB24639FCB002ED6E3 /* HttpDatas.swift in Sources */,
 				70C456B02463B656002ED6E3 /* HomeOneCell.swift in Sources */,
 				70C4569424639EF8002ED6E3 /* BaseNavigationViewController.swift in Sources */,
+				7088399824653A3900610890 /* NetWorkManager.swift in Sources */,
 				70C456A824639FC2002ED6E3 /* Common.swift in Sources */,
+				7088399624653A2500610890 /* API.swift in Sources */,
 				70C4569B24639F56002ED6E3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

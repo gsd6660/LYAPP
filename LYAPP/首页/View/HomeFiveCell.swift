@@ -9,6 +9,10 @@
 import UIKit
 
 class HomeFiveCell: UICollectionViewCell {
+    
+    var articles = NSArray()
+    
+    
     override init(frame: CGRect) {
         super.init(frame:frame)
         self.contentView.addSubview(tableView)
@@ -25,20 +29,35 @@ class HomeFiveCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func setArray(articles:NSArray){
+        self.articles = articles
+        self.tableView.reloadData()
+    }
+    
 }
+
+
 
 extension HomeFiveCell : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.articles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "cells")
         if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "cells")
+            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cells")
             cell?.selectionStyle = .none
+            cell?.textLabel?.font = customFont(font: 14)
+            cell?.detailTextLabel?.font = customFont(font: 11)
         }
-        cell?.textLabel?.text = "这个是标题~"
+        if self.articles.count>0 {
+            let dic = self.articles[indexPath.row] as! NSDictionary
+            cell?.textLabel?.text = (dic["article_title"] as! String)
+            cell?.detailTextLabel?.text = (dic["view_time"] as! String)
+        }
+        
         return cell!
     }
     
