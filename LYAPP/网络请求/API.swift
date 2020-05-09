@@ -20,6 +20,8 @@ enum API {
     case uploadImage(parameters:[String:Any],imageData:Data)
     //首页商品
     case HomeGoods
+    //商品列表
+    case GoodsList(parameters:[String:Any])
     
 }
 
@@ -41,6 +43,8 @@ extension API : TargetType{
             return ""
         case .HomeGoods:
             return "api/index/recommend"
+        case .GoodsList:
+            return "api/goods/lists"
         }
     }
     
@@ -57,7 +61,7 @@ extension API : TargetType{
         case let .Login(parameters):
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
          
-        case .Register(let parameters):
+        case .Register(let parameters),.GoodsList(let parameters):
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         case .Home,.HomeGoods:
             return .requestPlain
@@ -66,7 +70,6 @@ extension API : TargetType{
             
             return .uploadCompositeMultipart([formData], urlParameters: parameters)
         
-            
         }
     }
     

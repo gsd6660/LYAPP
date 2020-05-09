@@ -17,9 +17,9 @@ import MBProgressHUD
 ///超时时长
 private var requestTimeOut : Double = 30
 ///成功数据的回调
-typealias successCallBack = ((_ response:JSON)-> Void)
+typealias successCallBack = (_ response:JSON)-> Void
 ///失败回调
-typealias failedCallBack = ((_ failed:String)->Void)
+typealias failedCallBack = (_ failed:String)->Void
 ///网络错误的回调
 typealias errorCallBack = () -> Void
 
@@ -45,18 +45,15 @@ private let myEndpointClosure = {(target:API)-> Endpoint in
         sampleResponseClosure: { .networkResponse(200,target.sampleData)},
         method: target.method,
         task: task,
-        httpHeaderFields:
-        target.headers
+        httpHeaderFields: target.headers
     )
-    
-    requestTimeOut = 30
     
     return endpoint
 }
 
 ///网络请求的设置
 
-private let requestClosure = { (endpoint: Endpoint,done: MoyaProvider.RequestResultClosure) in
+private let requestClosure = { (endpoint: Endpoint,closure: MoyaProvider.RequestResultClosure) in
     do{
         var request = try endpoint.urlRequest()
         //设置请求时长
@@ -67,10 +64,11 @@ private let requestClosure = { (endpoint: Endpoint,done: MoyaProvider.RequestRes
         }else{
             print("\(request.url!)"+"\(String(describing: request.httpMethod))")
         }
-        done(.success(request))
+        
+        closure(.success(request))
         
     }catch{
-        done(.failure(MoyaError.underlying(error, nil)))
+        closure(.failure(MoyaError.underlying(error, nil)))
     }
     
 }
@@ -81,49 +79,39 @@ private let networkPlugin = NetworkActivityPlugin.init { (changeType, _) in
     switch changeType{
     case .began:
         print("开始请求网络")
-//        MBProgressHUD.hide(for: vc.view, animated: false)
-//        MBProgressHUD.showAdded(to: vc.view, animated: true)
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for: vc.view, animated: false)
+            MBProgressHUD.showAdded(to: vc.view, animated: true)
+        }
     case .ended:
         print("结束")
-//        MBProgressHUD.hide(for: vc.view, animated: false)
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for: vc.view, animated: false)
+        }
+        
     }
 }
 
+
+
 ///网络请求发送的核心初始化方法，创建网络请求对象
+let Provider = MoyaProvider<API>(endpointClosure: myEndpointClosure, requestClosure: requestClosure, plugins: [networkPlugin],trackInflights:false)
 
-let Provider = MoyaProvider<API>(endpointClosure: myEndpointClosure, requestClosure: requestClosure, plugins: [networkPlugin])
-
-
-/// 最常用的网络请求，只需知道正确的结果无需其他操作时候用这个
-
-func NetWorkRequest(_ target: API,completion: @escaping successCallBack){
-     
-}
-
-///  需要知道成功、失败、错误情况回调的网络请求   像结束下拉刷新各种情况都要判断
-/// - Parameters:
-///   - target: 网络请求
-///   - completion: 成功
-///   - failed: 失败
-///   - error: 错误
 @discardableResult
-func NetWorkRequest(_ target:API,completion: @escaping successCallBack,failed: failedCallBack?)->Cancellable?{
+func NetWorkRequest(_ target:API,completion: @escaping successCallBack )->Cancellable?{
     if !UIDevice.isNetworkConnect {
         print("提示用户网络似乎出现了问题")
         return nil
     }
-    
-    // 这里显示loading图
-    
     return Provider.request(target) { (result) in
-        // 隐藏hud
         switch result{
-        case let .success(response):
-                let jsonData = JSON(response.data)
-                completion(jsonData)
-        case let .failure(error):
-            //网络j连接失败，提示用户
-            print("网络连接失败\(error)")
+        
+        case .success(let response):
+            let jsonData = JSON(response.data)
+            completion(jsonData)
+        case .failure(_):
+            print("网络连接失败")
+          
         }
     }
 }
@@ -137,3 +125,6 @@ extension UIDevice{
         return network?.isReachable ?? true
     }
 }
+
+
+

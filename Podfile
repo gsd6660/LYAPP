@@ -19,4 +19,5 @@ target 'LYAPP' do
   pod 'FSPagerView'        #第三方图片轮播库
   pod 'SnapKit'
   pod 'MBProgressHUD'
+  pod 'SnapKitExtend', '~> 1.0.7'
 end

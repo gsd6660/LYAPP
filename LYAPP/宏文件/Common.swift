@@ -35,6 +35,8 @@ let GreenColor = RGBColor(r: 58, g: 205, b: 123)
  
 //灰色
 let GaryColor = RGBColor(r: 191, g: 191, b: 191)
+
+let BGColor = RGBColor(r: 245, g: 245, b: 245)
  
 
 //字号

@@ -50,8 +50,6 @@ class HomeViewController: BaseViewController {
                 self.articles = self.dataDic["articles"] as! NSArray
                 self.collectionView.reloadData()
             }
-        }, failed: { (failed) in
-            
         })
     }
     
@@ -62,8 +60,6 @@ class HomeViewController: BaseViewController {
                 self.goodsArray = respone["data"]["list"]["data"].arrayObject! as NSArray
                 self.collectionView.reloadData()
             }
-        }, failed: { (failed) in
-            
         })
     }
     

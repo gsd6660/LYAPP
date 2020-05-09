@@ -80,12 +80,12 @@ extension HomeFiveCell : UITableViewDelegate,UITableViewDataSource{
         headerView.addSubview(label)
         
         let rightBtn = UIButton.init(type: .custom)
-        rightBtn.frame = CGRect(x: kScreenW - 53, y: 0, width: 60, height: 50)
+        rightBtn.frame = CGRect(x: kScreenW - 60, y: 0, width: 50, height: 50)
         rightBtn.setTitle("更多", for: .normal)
         rightBtn.setTitleColor(GaryColor, for: .normal)
         rightBtn.setImage(UIImage.init(named: "jft_icon_rightarrow"), for: .normal)
-        rightBtn.imageEdgeInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 50)
-        rightBtn.titleLabel?.font = customFont(font: 12)
+        rightBtn.imagePosition(at: .right,space: 0)
+        rightBtn.titleLabel?.font = customFont(font: 14)
         headerView.addSubview(rightBtn)
       
         return headerView
