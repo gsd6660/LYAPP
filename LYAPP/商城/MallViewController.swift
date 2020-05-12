@@ -13,7 +13,7 @@ class MallViewController: BaseViewController {
 
     let CellID = "MallTableViewCell"
     var parDic = [String:Any]()
-    var dataArray = Array<AnyObject>()
+    lazy var dataArray = [Dictionary<String, Any>]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -77,9 +77,9 @@ extension MallViewController{
     func loadData(){
         NetWorkRequest(.GoodsList(parameters: self.parDic)) { (respone) in
             if respone["code"] == 1{
-                let dataDic = respone["data"]
-                let listDic = dataDic["list"] as Any
-                self.dataArray.append(listDic["data"])
+              
+                let datas = respone["data"]["list"]["data"].arrayObject
+                self.dataArray = datas as! [Dictionary<String, Any>]
                 self.tableView.reloadData()
             }
             print(respone)
@@ -118,8 +118,8 @@ extension MallViewController : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : MallTableViewCell = tableView.dequeueReusableCell(withIdentifier: CellID) as! MallTableViewCell
-        if !dataArray.isEmpty{
-            cell.setDataDic(dataDic: dataArray[indexPath.row] as! Dictionary<String, Any>)
+        if dataArray.count>0{
+            cell.setDataDic(dataDic: dataArray[indexPath.row] )
         }
         return cell
     }

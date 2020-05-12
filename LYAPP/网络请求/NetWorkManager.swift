@@ -108,6 +108,7 @@ func NetWorkRequest(_ target:API,completion: @escaping successCallBack )->Cancel
         
         case .success(let response):
             let jsonData = JSON(response.data)
+//            let jsonData = JSON.init(rawValue: response.data)
             completion(jsonData)
         case .failure(_):
             print("网络连接失败")

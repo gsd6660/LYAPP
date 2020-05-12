@@ -19,9 +19,9 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UL2-q1-V8H">
                         <rect key="frame" x="10" y="5" width="300" height="101"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LCP-7R-rik">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LCP-7R-rik">
                                 <rect key="frame" x="0.0" y="0.0" width="95" height="101"/>
-                                <color key="backgroundColor" red="0.2274509804" green="0.80392156859999997" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="fCi-un-TWu"/>
                                 </constraints>

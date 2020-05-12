@@ -10,6 +10,8 @@
 		7008392824664BA0006DC86C /* UIButton+right.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7008392724664BA0006DC86C /* UIButton+right.swift */; };
 		7008392B24665AF8006DC86C /* MallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7008392924665AF8006DC86C /* MallTableViewCell.swift */; };
 		7008392C24665AF8006DC86C /* MallTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7008392A24665AF8006DC86C /* MallTableViewCell.xib */; };
+		707DC69F246A8ADC00297B3B /* CarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DC69D246A8ADC00297B3B /* CarViewCell.swift */; };
+		707DC6A0246A8ADC00297B3B /* CarViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 707DC69E246A8ADC00297B3B /* CarViewCell.xib */; };
 		7088399624653A2500610890 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7088399524653A2500610890 /* API.swift */; };
 		7088399824653A3900610890 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7088399724653A3900610890 /* NetWorkManager.swift */; };
 		7088399A24653A4600610890 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7088399924653A4600610890 /* MoyaConfig.swift */; };
@@ -52,6 +54,8 @@
 		7008392724664BA0006DC86C /* UIButton+right.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+right.swift"; sourceTree = "<group>"; };
 		7008392924665AF8006DC86C /* MallTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallTableViewCell.swift; sourceTree = "<group>"; };
 		7008392A24665AF8006DC86C /* MallTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MallTableViewCell.xib; sourceTree = "<group>"; };
+		707DC69D246A8ADC00297B3B /* CarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewCell.swift; sourceTree = "<group>"; };
+		707DC69E246A8ADC00297B3B /* CarViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarViewCell.xib; sourceTree = "<group>"; };
 		7088399524653A2500610890 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		7088399724653A3900610890 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
 		7088399924653A4600610890 /* MoyaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; wrapsLines = 0; };
@@ -211,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				70C4569E24639F88002ED6E3 /* CartViewController.swift */,
+				707DC69D246A8ADC00297B3B /* CarViewCell.swift */,
+				707DC69E246A8ADC00297B3B /* CarViewCell.xib */,
 			);
 			path = "购物车";
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 				7088399F2465834000610890 /* qdy@2x.png in Resources */,
 				70C456BD2463BBF5002ED6E3 /* 6.jpg in Resources */,
 				7008392C24665AF8006DC86C /* MallTableViewCell.xib in Resources */,
+				707DC6A0246A8ADC00297B3B /* CarViewCell.xib in Resources */,
 				70C456CE2463F5ED002ED6E3 /* HomeFourCell.xib in Resources */,
 				70C456BE2463BBF5002ED6E3 /* 5.jpg in Resources */,
 				70C456BA2463BBF5002ED6E3 /* 2.jpg in Resources */,
@@ -409,6 +416,7 @@
 				70C456A824639FC2002ED6E3 /* Common.swift in Sources */,
 				7088399624653A2500610890 /* API.swift in Sources */,
 				70C4569B24639F56002ED6E3 /* HomeViewController.swift in Sources */,
+				707DC69F246A8ADC00297B3B /* CarViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

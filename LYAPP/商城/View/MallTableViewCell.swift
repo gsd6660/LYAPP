@@ -34,7 +34,7 @@ class MallTableViewCell: UITableViewCell {
         let goodsDic = dataDic["goods_sku"] as! Dictionary<String, Any>
         priceLabel.text = "￥\(goodsDic["goods_price"]as!String)"
         oldPriceLabel.text = "￥\(goodsDic["line_price"]as!String)"
-        salesLabel.text = "共销售\(String(describing: dataDic["goods_sales"]as?String))件"
+        salesLabel.text = "共销售\(dataDic["goods_sales"] ?? "0")件"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
